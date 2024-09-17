@@ -1,0 +1,120 @@
+API для CRUD операций:
+
+    Authors:
+        POST /api/authors: создать нового автора.
+        GET /api/authors: получить всех авторов.
+        GET /api/authors/:id: получить автора по ID.
+        PUT /api/authors/:id: обновить автора.
+        DELETE /api/authors/:id: удалить автора.
+
+    Books:
+        POST /api/books: создать новую книгу.
+        GET /api/books: получить все книги.
+        GET /api/books/:id: получить книгу по ID.
+        PUT /api/books/:id: обновить книгу.
+        DELETE /api/books/:id: удалить книгу.
+
+    Publishers:
+        POST /api/publishers: создать нового издателя.
+        GET /api/publishers: получить всех издателей.
+        GET /api/publishers/:id: получить издателя по ID.
+        PUT /api/publishers/:id: обновить издателя.
+        DELETE /api/publishers/:id: удалить издателя
+
+
+Вот данные о книгах "The Hobbit" и "The Lord of the Rings", которые можно использовать для тестирования ваших эндпойнтов.
+1. The Hobbit
+
+    Название: The Hobbit
+    Дата публикации: 21 сентября 1937 года
+    Автор: J.R.R. Tolkien
+    Издатели:
+        George Allen & Unwin (оригинальный издатель)
+        Houghton Mifflin (американский издатель)
+
+2. The Lord of the Rings
+
+    Название: The Lord of the Rings
+        Книга состоит из трех частей:
+            The Fellowship of the Ring (опубликована 29 июля 1954 года)
+            The Two Towers (опубликована 11 ноября 1954 года)
+            The Return of the King (опубликована 20 октября 1955 года)
+    Автор: J.R.R. Tolkien
+    Издатели:
+        George Allen & Unwin (оригинальный издатель)
+        Houghton Mifflin (американский издатель)
+
+Пример тестовых данных для запросов
+POST /api/authors
+
+
+{
+  "name": "J.R.R. Tolkien",
+  "birthDate": "1892-01-03"
+}
+
+POST /api/publishers
+
+
+{
+  "name": "George Allen & Unwin",
+  "founded": 1911
+}
+
+
+{
+  "name": "Houghton Mifflin",
+  "founded": 1832
+}
+
+POST /api/books
+
+
+{
+  "title": "The Hobbit",
+  "publishDate": "1937-09-21",
+  "author": "ID автора J.R.R. Tolkien",
+  "publishers": [
+    "ID издателя George Allen & Unwin",
+    "ID издателя Houghton Mifflin"
+  ]
+}
+
+
+{
+  "title": "The Fellowship of the Ring",
+  "publishDate": "1954-07-29",
+  "author": "ID автора J.R.R. Tolkien",
+  "publishers": [
+    "ID издателя George Allen & Unwin",
+    "ID издателя Houghton Mifflin"
+  ]
+}
+
+
+{
+  "title": "The Two Towers",
+  "publishDate": "1954-11-11",
+  "author": "ID автора J.R.R. Tolkien",
+  "publishers": [
+    "ID издателя George Allen & Unwin",
+    "ID издателя Houghton Mifflin"
+  ]
+}
+
+
+{
+  "title": "The Return of the King",
+  "publishDate": "1955-10-20",
+  "author": "ID автора J.R.R. Tolkien",
+  "publishers": [
+    "ID издателя George Allen & Unwin",
+    "ID издателя Houghton Mifflin"
+  ]}        
+
+
+  "author": "66e71599014469cb36e11abc",
+  "publishers": [
+    "66e71708014469cb36e11abe",
+    "66e71718014469cb36e11ac0"
+  ]
